@@ -1,7 +1,6 @@
 package com.techstudy.springboot;
 
 
-import jakarta.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -18,9 +17,5 @@ public class SpringbootDockerDemoApplication {
 		SpringApplication.run(SpringbootDockerDemoApplication.class, args);
 	}
 
-	@PostConstruct
-	public void sety(){
-		System.out.println("url = " + url);
-	}
 
 }

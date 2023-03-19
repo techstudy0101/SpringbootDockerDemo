@@ -1,6 +1,6 @@
 package com.techstudy.springboot.models;
 
-import jakarta.persistence.*;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "orders")
