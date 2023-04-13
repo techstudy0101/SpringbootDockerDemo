@@ -27,7 +27,22 @@ Using DockerCompose
 ```docker-compose up --build --force-recreate```
 
 
-#### links
+#### Links
 https://docs.docker.com/compose/compose-file/#ports
+Download Jenkin: https://www.jenkins.io/download/lts/macos/
+Download Minikube: https://minikube.sigs.k8s.io/docs/start/
+
+
+#### Jenkin Commands
+Install the latest LTS version: brew install jenkins-lts
+Install a specific LTS version: brew install jenkins-lts@YOUR_VERSION
+Start the Jenkins service: brew services start jenkins-lts
+Restart the Jenkins service: brew services restart jenkins-lts
+Update the Jenkins version: brew upgrade jenkins-lts
+
+
+#### Minikube
+minikube start
+
 
 

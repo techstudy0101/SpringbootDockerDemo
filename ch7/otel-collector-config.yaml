@@ -1,0 +1,30 @@
+receivers:
+  otlp:
+    protocols:
+      http:
+        endpoint: otel-collector:4318
+      grpc:
+        endpoint: otel-collector:4317
+
+exporters:
+  logging:
+    loglevel: debug
+
+  prometheus:
+    endpoint: "0.0.0.0:8889"
+
+processors:
+  batch:
+
+
+service:
+  extensions: []
+  pipelines:
+    metrics:
+      receivers: [otlp]
+      processors: [batch]
+      exporters: [logging, prometheus]
+    traces:
+      receivers: [otlp]
+      processors: []
+      exporters: [logging]

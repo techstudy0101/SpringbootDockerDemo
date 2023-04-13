@@ -1,0 +1,33 @@
+server:
+  port: 10001
+
+spring:
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/ecom?createDatabaseIfNotExist=true
+    username: root
+    password:
+  jpa:
+    hibernate.ddl-auto: update
+  application:
+    name: MySimple
+  sleuth:
+    otel:
+      exporter:
+        otlp:
+          endpoint= http://${COLLECTOR}}:4317
+
+logging:
+  level:
+    root: INFO
+
+management:
+  security:
+    enabled: false
+  endpoints:
+    web:
+      exposure:
+        include=*:
+    jmx:
+      exposure:
+        include=*:
+

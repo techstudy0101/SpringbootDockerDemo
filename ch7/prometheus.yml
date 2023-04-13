@@ -1,0 +1,14 @@
+scrape_configs:
+  - job_name: 'Spring Boot Application input'
+    scrape_interval: 1s
+    static_configs:
+      - targets: ['otel-collector:8889']
+        labels:
+          application: 'My Spring Boot Application'
+  - job_name: 'Myjob'
+    scrape_interval: 1s
+    metrics_path: '/actuator/prometheus'
+    static_configs:
+      - targets: [ 'demo1:9000' ]
+        labels:
+          application: 'SpringApplication'

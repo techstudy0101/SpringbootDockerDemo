@@ -6,10 +6,13 @@ services:
     image: mysql
     ports:
       - "3306:3306"
+    expose:
+      - 3306
     environment:
       - MYSQL_ROOT_PASSWORD=''
       - MYSQL_ROOT_USER=root
       - MYSQL_ALLOW_EMPTY_PASSWORD=true
+
 
   demo1:
     build: .
